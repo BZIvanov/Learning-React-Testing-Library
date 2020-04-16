@@ -13,9 +13,12 @@ export const theme = createMuiTheme({
   palette: {
     common: {
       semiWhite: '#f7f7f7',
+      semiGray: '#777777',
     },
     background: {
       darkGray: '#444444',
+      semiWhite: '#f7f7f7',
+      semiGray: '#777777',
     },
   },
 });
