@@ -1,15 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { theme } from './theme';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import usersReducer from './store/reducers/users';
+import toursReducer from './store/reducers/tours';
+
 console.log(theme);
+
+const rootReducer = combineReducers({
+  users: usersReducer,
+  tours: toursReducer,
+});
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
+
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
