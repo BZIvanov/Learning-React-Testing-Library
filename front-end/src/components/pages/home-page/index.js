@@ -1,7 +1,8 @@
 import React from 'react';
+import { ToursOverview } from '../../organisms';
 
 const HomePage = () => {
-  return <h1>Home page</h1>;
+  return <ToursOverview />;
 };
 
 export default HomePage;
