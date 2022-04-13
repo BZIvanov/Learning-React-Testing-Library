@@ -34,6 +34,8 @@ describe('UserForm component', () => {
     });
     fruitsDropdown.focus();
     fireEvent.change(fruitsDropdown, { target: { value: 'Apple' } });
+    fireEvent.keyDown(fruitsDropdown, { key: 'ArrowDown' });
+    fireEvent.keyDown(fruitsDropdown, { key: 'Enter' });
 
     expect(fruitsDropdown.value).toBe('Apple');
   });
