@@ -12,6 +12,11 @@ This repo contains example of testing with react-testing-library.
 
 [Testing playground](https://testing-playground.com/) website is useful for generating selectors. Paste your app html code from the browser to the top-left section of the tool. On the top-right you can find your ready to use selectors.
 
+## Custom providers
+
+When testing we need to deal with providers like theme, redux, intl etc...
+Check [here](https://testing-library.com/docs/react-testing-library/setup#custom-render) for info how to setup all the app custom providers.
+
 ## Jest extension
 
 Make sure to install **Jest** VS code extension by Orta. It will add another icon option on the left where you can see all the tests folders/files as a tree. You can see the status of all tests and run them individually.
