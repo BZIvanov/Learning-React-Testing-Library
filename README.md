@@ -1,6 +1,7 @@
 # React Testing Library
 
 This repo contains example of testing with react-testing-library.
+This repo also contains info on how to use jest after RTL and jest are closely related.
 
 ## Query types
 
