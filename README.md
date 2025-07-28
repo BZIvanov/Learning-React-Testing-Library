@@ -1,7 +1,13 @@
-# React Testing Library
+# Learning React Testing Library
 
 This repo contains example of testing with react-testing-library.
 This repo also contains info on how to use jest after RTL and jest are closely related.
+
+## Jest
+
+React Testing Library is built on top of **Jest**, which provides the core testing functionality such as assertions, mocking, and test runners.
+
+If you're interested in learning about **Jest** itself (especially for use outside of React, like in Node.js applications), there's a dedicated repository focused solely on Jest: [Learning Jest Repository](https://github.com/BZIvanov/Learning-Jest).
 
 ## Query types
 
